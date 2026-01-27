@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emotion Experiment</title>
+
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(to bottom right, #f5f5f5, #ffffff);
+      color: #333;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      width: 320px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #555;
+    }
+
+    #message {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>How are you feeling?</h1>
+
+    <label>
+      <input type="checkbox" id="happy"> Happy
+    </label>
+
+    <label>
+      <input type="checkbox" id="sad"> Sad
+    </label>
+
+    <label>
+      <input type="checkbox" id="angry"> Angry
+    </label>
+
+    <label>
+      <input type="checkbox" id="calm"> Calm
+    </label>
+
+    <button onclick="checkEmotion()">Submit</button>
+
+    <p id="message"></p>
+  </div>
+
+  <script>
+    // This will asks for the user's name and emotion, then shows a message, which will change the background to a gradient.
+
+    var userName = prompt("What is your name?");
+
+    function getEmotionMessage(emotion) {
+      if (emotion === "happy") {
+        return "I'm glad you're feeling happy today, " + userName + ".";
+      } else if (emotion === "sad") {
+        return "It's okay to feel sad, " + userName + ". Take it slow today.";
+      } else if (emotion === "angry") {
+        return "Pause and breathe, " + userName + ". This feeling will pass.";
+      } else if (emotion === "calm") {
+        return "It's nice to feel calm, " + userName + ". Enjoy the moment.";
+      } else {
+        return "Please select one emotion.";
+      }
+    }
+
+    function checkEmotion() {
+      var emotion = "";
+
+      if (document.querySelector("#happy").checked) {
+        emotion = "happy";
+        document.body.style.backgroundImage =
+          "linear-gradient(to bottom right, #fff3b0, #ffffff)";
+      } else if (document.querySelector("#sad").checked) {
+        emotion = "sad";
+        document.body.style.backgroundImage =
+          "linear-gradient(to bottom right, #dbeafe, #ffffff)";
+      } else if (document.querySelector("#angry").checked) {
+        emotion = "angry";
+        document.body.style.backgroundImage =
+          "linear-gradient(to bottom right, #ffd6d6, #ffffff)";
+      } else if (document.querySelector("#calm").checked) {
+        emotion = "calm";
+        document.body.style.backgroundImage =
+          "linear-gradient(to bottom right, #e6f4ea, #ffffff)";
+      } else {
+        document.body.style.backgroundImage =
+          "linear-gradient(to bottom right, #f5f5f5, #ffffff)";
+      }
+
+      var message = getEmotionMessage(emotion);
+      document.querySelector("#message").textContent = message;
+    }
+  </script>
+
+</body>
+</html>
