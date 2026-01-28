@@ -6,7 +6,7 @@
 
   <style>
     body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       min-height: 100vh;
       display: flex;
@@ -25,15 +25,13 @@
     }
 
     h1 {
-      font-size: 1.6rem;
-      margin-bottom: 20px;
       text-align: center;
+      margin-bottom: 20px;
     }
 
     label {
       display: block;
       margin-bottom: 12px;
-      font-size: 1rem;
       cursor: pointer;
     }
 
@@ -41,7 +39,6 @@
       width: 100%;
       margin-top: 20px;
       padding: 10px;
-      font-size: 1rem;
       border: none;
       border-radius: 8px;
       background: #333;
@@ -49,16 +46,51 @@
       cursor: pointer;
     }
 
-    button:hover {
-      background: #555;
-    }
-
     #message {
-      margin-top: 24px;
+      margin-top: 20px;
       text-align: center;
-      font-size: 1rem;
     }
   </style>
+
+  <script>
+    var userName = prompt("What is your name?");
+
+    function checkEmotion() {
+      var message = "";
+      var body = document.body;
+
+      if (document.getElementById("happy").checked) {
+        message = "I'm glad you're feeling happy today, " + userName + ".";
+        body.style.backgroundImage =
+          "linear-gradient(to bottom right, lightyellow, white)";
+      } 
+      else if (document.getElementById("sad").checked) {
+        message = "It's okay to feel sad, " + userName + ".";
+        body.style.backgroundImage =
+          "linear-gradient(to bottom right, lightblue, white)";
+      } 
+      else if (document.getElementById("angry").checked) {
+        message = "Take a breath, " + userName + ".";
+        body.style.backgroundImage =
+          "linear-gradient(to bottom right, lightcoral, white)";
+      } 
+      else if (document.getElementById("calm").checked) {
+        message = "Enjoy the calm moment, " + userName + ".";
+        body.style.backgroundImage =
+          "linear-gradient(to bottom right, lightgreen, white)";
+      } 
+      else {
+        message = "Please choose an emotion.";
+      }
+
+      document.getElementById("message").textContent = message;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var button = document.getElementById("submitBtn");
+      button.addEventListener("click", checkEmotion);
+    });
+  </script>
 </head>
 
 <body>
@@ -66,74 +98,15 @@
   <div class="card">
     <h1>How are you feeling?</h1>
 
-    <label>
-      <input type="checkbox" id="happy"> Happy
-    </label>
+    <label><input type="checkbox" id="happy"> Happy</label>
+    <label><input type="checkbox" id="sad"> Sad</label>
+    <label><input type="checkbox" id="angry"> Angry</label>
+    <label><input type="checkbox" id="calm"> Calm</label>
 
-    <label>
-      <input type="checkbox" id="sad"> Sad
-    </label>
-
-    <label>
-      <input type="checkbox" id="angry"> Angry
-    </label>
-
-    <label>
-      <input type="checkbox" id="calm"> Calm
-    </label>
-
-    <button onclick="checkEmotion()">Submit</button>
+    <button id="submitBtn">Submit</button>
 
     <p id="message"></p>
   </div>
-
-  <script>
-    // This will asks for the user's name and emotion, then shows a message, which will change the background to a gradient.
-
-    var userName = prompt("What is your name?");
-
-    function getEmotionMessage(emotion) {
-      if (emotion === "happy") {
-        return "I'm glad you're feeling happy today, " + userName + ".";
-      } else if (emotion === "sad") {
-        return "It's okay to feel sad, " + userName + ". Take it slow today.";
-      } else if (emotion === "angry") {
-        return "Pause and breathe, " + userName + ". This feeling will pass.";
-      } else if (emotion === "calm") {
-        return "It's nice to feel calm, " + userName + ". Enjoy the moment.";
-      } else {
-        return "Please select one emotion.";
-      }
-    }
-
-    function checkEmotion() {
-      var emotion = "";
-
-      if (document.querySelector("#happy").checked) {
-        emotion = "happy";
-        document.body.style.backgroundImage =
-          "linear-gradient(to bottom right, #fff3b0, #ffffff)";
-      } else if (document.querySelector("#sad").checked) {
-        emotion = "sad";
-        document.body.style.backgroundImage =
-          "linear-gradient(to bottom right, #dbeafe, #ffffff)";
-      } else if (document.querySelector("#angry").checked) {
-        emotion = "angry";
-        document.body.style.backgroundImage =
-          "linear-gradient(to bottom right, #ffd6d6, #ffffff)";
-      } else if (document.querySelector("#calm").checked) {
-        emotion = "calm";
-        document.body.style.backgroundImage =
-          "linear-gradient(to bottom right, #e6f4ea, #ffffff)";
-      } else {
-        document.body.style.backgroundImage =
-          "linear-gradient(to bottom right, #f5f5f5, #ffffff)";
-      }
-
-      var message = getEmotionMessage(emotion);
-      document.querySelector("#message").textContent = message;
-    }
-  </script>
 
 </body>
 </html>
