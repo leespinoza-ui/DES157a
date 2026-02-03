@@ -29,7 +29,7 @@ p {
 
 /* Directions box */
 p:first-of-type {
-  background-color: #ffe0ec; /* light pink */
+  background-color: #ffe0ec; 
   border-radius: 16px;
   padding: 18px;
   border: 3px dashed #e65c8a;
@@ -53,7 +53,7 @@ li {
 
 /* Highlighted Mad Lib words */
 mark {
-  background-color: #ffb3d1; /* bright pink */
+  background-color: #ffb3d1; 
   color: #4a2c2a;
   padding: 2px 6px;
   border-radius: 6px;
