@@ -221,8 +221,8 @@ input[type="submit"] {
 
 /* Story text */
 #madlib p {
-  font-size: 1rem;
-  line-height: 2.3;
+  font-size: .8rem;
+  line-height: 2.1;
   margin-bottom: 16px;
   max-width: 720px;
 }
