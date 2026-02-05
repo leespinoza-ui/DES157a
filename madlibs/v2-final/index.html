@@ -22,144 +22,116 @@
 </head>
 
 <body>
-  <main>
-    <h1>Mad Libs</h1>
-    <section>
-      <p>
-        <strong>Directions:</strong><br>
-        Before reading the story, write down a word for each category listed below.
-        Don’t read the story yet! Once all the words are chosen, read the story out
-        loud and replace each highlighted word with the word you picked.
-      </p>
-    </section>
+    <header>
+      <h1>Mad Libs</h1>
 
-    <section>
       <h2>How to Play</h2>
-      <p>
-        Mad Libs are a fun word game where you create a silly story without knowing
-        how it will turn out. The surprise is what makes it funny!
-      </p>
-      <p>
-        Ask a friend to help you choose words, or challenge yourself to come up
-        with the weirdest words you can think of.
-      </p>
-    </section>
+      <p>Mad Libs are a fun word game where you create a silly story without knowing
+        how it will turn out. The surprise is what makes it funny!</p>
+      <p> Ask a friend to help you choose words, or challenge yourself to come up
+        with the weirdest words you can think of. </p>
+    </header>
+
+    <main>
     
     <section>
-      <h2>Helpful Tips</h2>
-      <p>Don’t think too hard, silly words work best!</p>
-      <p>Avoid reading ahead in the story.</p>
-      <p>Try playing more than once with different words.</p>
-      <p>Reading the final story out loud makes it even funnier.</p>
+        <img src="images/animals.png" alt="Animals">
     </section>
 
-    <h2>Word List</h2>
-    <form id="myform">
-      <ul>
-        <li>
-          <label for="adjective1"><strong>Adjective</strong>:</label>
-          <input id="adjective1" type="text" placeholder="ex: sparkly">
-        </li>
+    <section id="madlib-questions">
+        <h2>MadLib Questions</h2>
+        <form id="form">
+          <ul>
+            <li>
+              <label for="adjective1"><strong>Adjective</strong>:</label>
+              <input type="text" id="adjective1" placeholder="ex: sparkly">
+            </li>
 
-        <li>
-          <label for="animal"><strong>Animal</strong>:</label>
-          <input id="animal" type="text" placeholder="ex: hamster">
-        </li>
+            <li>
+              <label for="animal"><strong>Animal</strong>:</label>
+              <input type="text" id="animal"  placeholder="ex: hamster">
+            </li>
 
-        <li>
-          <label for="place1"><strong>Place</strong>:</label>
-          <input id="place1" type="text" placeholder="ex: library">
-        </li>
+            <li>
+              <label for="place1"><strong>Place</strong>:</label>
+              <input type="text" id="place1" placeholder="ex: library">
+            </li>
 
-        <li>
-          <label for="verb1"><strong>Verb</strong>:</label>
-          <input id="verb1" type="text" placeholder="ex: dance">
-        </li>
+            <li>
+              <label for="verb1"><strong>Verb</strong>:</label>
+              <input type="text" id="verb1" placeholder="ex: dance">
+            </li>
 
-        <li>
-          <label for="noun1"><strong>Noun</strong>:</label>
-          <input id="noun1" type="text" placeholder="ex: backpack">
-        </li>
+            <li>
+              <label for="noun1"><strong>Noun</strong>:</label>
+              <input type="text" id="noun1" placeholder="ex: backpack">
+            </li>
 
-        <li>
-          <label for="adjective2"><strong>Adjective</strong>:</label>
-          <input id="adjective2" type="text" placeholder="ex: silly">
-        </li>
+            <li>
+              <label for="adjective2"><strong>Adjective</strong>:</label>
+              <input type="text" id="adjective2" placeholder="ex: silly">
+            </li>
 
-        <li>
-          <label for="noun2"><strong>Noun</strong>:</label>
-          <input id="noun2" type="text" placeholder="ex: sandwich">
-        </li>
+            <li>
+              <label for="noun2"><strong>Noun</strong>:</label>
+              <input type="text" id="noun2" placeholder="ex: sandwich">
+            </li>
 
-        <li>
-          <label for="noun3"><strong>Noun</strong>:</label>
-          <input id="noun3" type="text" placeholder="ex: balloon">
-        </li>
+            <li>
+              <label for="noun3"><strong>Noun</strong>:</label>
+              <input type="text" id="noun3" placeholder="ex: balloon">
+            </li>
 
-        <li>
-          <label for="place2"><strong>Place</strong>:</label>
-          <input id="place2" type="text" placeholder="ex: kitchen">
-        </li>
+            <li>
+              <label for="place2"><strong>Place</strong>:</label>
+              <input type="text" id="place2"  placeholder="ex: kitchen">
+            </li>
 
-        <li>
-          <label for="verb2"><strong>Verb</strong>:</label>
-          <input id="verb2" type="text" placeholder="ex: hop">
-        </li>
+            <li>
+              <label for="verb2"><strong>Verb</strong>:</label>
+              <input type="text" id="verb2" placeholder="ex: hop">
+            </li>
 
-        <li>
-          <label for="noun4"><strong>Noun</strong>:</label>
-          <input id="noun4" type="text" placeholder="ex: cookie">
-        </li>
+            <li>
+              <label for="noun4"><strong>Noun</strong>:</label>
+              <input type="text" id="noun4" placeholder="ex: cookie">
+            </li>
 
-        <li>
-          <label for="adjective3"><strong>Adjective</strong>:</label>
-          <input id="adjective3" type="text" placeholder="ex: goofy">
-        </li>
-      </ul>
-      
-      <input type="submit" value="Make My Story">
-    </form>
+            <li>
+              <label for="adjective3"><strong>Adjective</strong>:</label>
+              <input type="text" id="adjective3" placeholder="ex: goofy">
+            </li>
+          </ul>
+          <input type="submit" value="Make My MadLib!"</input>
+        </form>
 
-    <article id="madlib"></article>
-
-    <img src="images/animals.png" alt="animals" class="madlib-image">
-
-    <section id="story">
-      <h2>The Story</h2>
-
-      <p>
-        It all started on a <strong><mark id="adj1">[adjective]</mark></strong> morning when a very
-        suspicious <strong><mark id="animal1">[animal]</mark></strong> woke up inside the
-        <strong><mark id="place1out">[place]</mark></strong>.
-      </p>
-
-      <p>
-        Without warning, the <strong><mark id="animal1b">[animal]</mark></strong> began to
-        <strong><mark id="verb1out">[verb]</mark></strong> while shouting about a missing
-        <strong><mark id="noun1out">[noun]</mark></strong>.
-      </p>
-
-      <p>
-        People nearby froze in fear as the <strong><mark id="adj2">[adjective]</mark></strong>
-        <strong><mark id="animal1c">[animal]</mark></strong> knocked over chairs, slipped on the
-        floor, and accidentally launched the
-        <strong><mark id="noun2out">[noun]</mark></strong> into the air.
-      </p>
-
-      <p>
-        Somehow, the <strong><mark id="noun3out">[noun]</mark></strong> landed back inside the
-        <strong><mark id="place2out">[place]</mark></strong>, causing alarms to go off and confetti
-        to rain from the ceiling.
-      </p>
-
-      <p>
-        In the end, the <strong><mark id="animal1d">[animal]</mark></strong> bowed politely,
-        continued to <strong><mark id="verb2out">[verb]</mark></strong>, and vanished forever
-        leaving behind only the <strong><mark id="noun4out">[noun]</mark></strong> and a very
-        <strong><mark id="adj3">[adjective]</mark></strong> memory.
-      </p>
+        <div id="error"></div>
     </section>
 
+    <section id="madlib-overlay">
+      <article>
+        <div id="madlib">
+          <!--<h2>The Story</h2>
+
+          <p>It all started on a <strong><mark>${adjective1}</mark></strong> morning when a very suspicious <strong><mark>${animal}</mark></strong> woke up inside the <strong><mark>${place1}</mark></strong>.<p>
+
+          <p>Without warning, the <strong><mark>${animal}</mark></strong> began to <strong><mark>${verb1}</mark></strong> while shouting about a missing <strong><mark>${noun1}</mark></strong>.</p>
+
+          <p>People nearby froze in fear as the <strong><mark>${adjective2}</mark><strong> <strong><mark>${animal}</mark></strong> knocked over chairs, slipped on the floor, and accidentally launched the <strong><mark>${noun2}</mark></strong> into the air.</p>
+
+          <p>Somehow, the <strong><mark>${noun3}</mark></strong> landed back inside the <strong><mark>${place2}</mark></strong>, causing alarms to go off and confetti to rain from the ceiling.</p>
+
+          <p>In the end, the <strong><mark>${animal}</mark></strong> bowed politely,continued to <strong><mark>${verb2}</mark></strong>, and vanished forever leaving behind only the <strong><mark>${noun4}</mark></strong> and a very<strong><mark>${adjective3}</mark></strong> memory.</p>
+
+          <img src="images/animals.png alt="animals> -->
+        </div>
+        <p><a href="#" id="close">Close</a></p>
+      </article>
+    </section>
   </main>
+
+  <footer>
+    <p>&copy; MadLib Example 2</p>
+  </footer>
 </body>
 </html>
