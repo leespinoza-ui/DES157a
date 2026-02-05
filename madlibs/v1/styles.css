@@ -60,17 +60,14 @@ mark {
   font-weight: bold;
 }
 
-/* Story container */
 h2 + p {
   margin-top: 20px;
 }
 
-/* Make story feel playful */
 p em {
   font-style: normal;
 }
 
-/* Small screens */
 @media (max-width: 600px) {
   h1 {
     font-size: 2.4rem;

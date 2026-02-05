@@ -1,4 +1,3 @@
-/* ---------- Colors + Global ---------- */
 :root{
   --ink: #2b2230;
   --muted: #6b6276;
@@ -20,7 +19,6 @@ body{
   font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
   color: var(--ink);
 
-  /* fluffy pink background */
   background:
     radial-gradient(18px 18px at 12% 18%, rgba(255,255,255,.35), transparent 60%),
     radial-gradient(22px 22px at 28% 30%, rgba(255,255,255,.25), transparent 60%),
@@ -35,7 +33,6 @@ body{
     linear-gradient(180deg, #ffd6ea 0%, #ffe6f2 40%, #ffeaf5 100%);
 }
 
-/* ---------- Page Container ---------- */
 #container{
   width: min(1020px, 92vw);
   margin: 18px auto 36px;
@@ -49,7 +46,7 @@ body{
   box-shadow: var(--shadow);
 }
 
-/* ---------- Header ---------- */
+/*  Header */
 header{
   text-align: center;
   padding: 6px 6px 14px;
@@ -71,7 +68,7 @@ header h2{
   font-size: clamp(.95rem, 3.2vw, 1.05rem);
 }
 
-/* ---------- Banner ---------- */
+/*  Banner  */
 #banner{
   position: relative;
   overflow: hidden;
@@ -199,15 +196,13 @@ header h2{
   animation-delay: .5s;
 }
 
-/* ---------- Main Layout (Mobile First) ---------- */
 main{
   margin-top: 14px;
   display: grid;
-  grid-template-columns: 1fr; /* mobile */
+  grid-template-columns: 1fr; 
   gap: 14px;
 }
 
-/* ---------- Panels (Cards) ---------- */
 .panel{
   position: relative;
   overflow: hidden;
@@ -309,7 +304,7 @@ main{
   outline-offset: 3px;
 }
 
-/* ---------- Desktop Layout ---------- */
+/*  Desktop Layout */
 @media (min-width: 880px){
   main{
     grid-template-columns: repeat(2, 1fr);
@@ -318,7 +313,7 @@ main{
   }
 }
 
-/* ---------- Footer ---------- */
+/* Footer  */
 footer{
   margin-top: 14px;
   text-align: center;
@@ -337,7 +332,7 @@ footer a:hover{
   color: var(--pink);
 }
 
-/* ---------- Animations ---------- */
+/*  Animations  */
 @keyframes bannerPop{
   0%,100%{ transform: translateY(0); }
   50%{ transform: translateY(-4px); }
