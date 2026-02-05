@@ -90,17 +90,17 @@
       madlib.innerHTML = myText;
       myText = `<h2>The Story</h2>
 
-      <p>It all started on a <strong><mark>${adjective1}</mark></strong> morning when a very suspicious <strong><mark>${animal}</mark></strong> woke up inside the <strong><mark>${place1}</mark></strong>.<p>
+      <p>It all started on a <strong><mark>${adjective1}</mark></strong> morning when a very suspicious <strong><mark>${animal}</mark></strong> woke up inside the <strong><mark>${place1}</mark></strong>.
 
-      <p>Without warning, the <strong><mark>${animal}</mark></strong> began to <strong><mark>${verb1}</mark></strong> while shouting about a missing <strong><mark>${noun1}</mark></strong>.</p>
+      Without warning, the <strong><mark>${animal}</mark></strong> began to <strong><mark>${verb1}</mark></strong> while shouting about a missing <strong><mark>${noun1}</mark></strong>.
 
-      <p>People nearby froze in fear as the <strong><mark>${adjective2}</mark><strong> <strong><mark>${animal}</mark></strong> knocked over chairs, slipped on the floor, and accidentally launched the <strong><mark>${noun2}</mark></strong> into the air.</p>
+      People nearby froze in fear as the <strong><mark>${adjective2}</mark><strong> <strong><mark>${animal}</mark></strong> knocked over chairs, slipped on the floor, and accidentally launched the <strong><mark>${noun2}</mark></strong> into the air.
 
-      <p>Somehow, the <strong><mark>${noun3}</mark></strong> landed back inside the <strong><mark>${place2}</mark></strong>, causing alarms to go off and confetti to rain from the ceiling.</p>
+      Somehow, the <strong><mark>${noun3}</mark></strong> landed back inside the <strong><mark>${place2}</mark></strong>, causing alarms to go off and confetti to rain from the ceiling.
 
-      <p>In the end, the <strong><mark>${animal}</mark></strong> bowed politely,continued to <strong><mark>${verb2}</mark></strong>, and vanished forever leaving behind only the <strong><mark>${noun4}</mark></strong> and a very <strong><mark>${adjective3}</mark></strong> memory.</p>
+      In the end, the <strong><mark>${animal}</mark></strong> bowed politely,continued to <strong><mark>${verb2}</mark></strong>, and vanished forever leaving behind only the <strong><mark>${noun4}</mark></strong> and a very <strong><mark>${adjective3}</mark></strong> memory.</p>
       
-      <img src="images/animals.png alt="animals">`;
+      <img src="images/animals.png" alt="Animals">`;
 
       document.querySelector('#adjective1').value = '';
       document.querySelector('#animal').value = '';
@@ -117,7 +117,7 @@
 
 
     madlib.innerHTML = myText;
-    madlibOverlay.style.display = "block";
+    madlibOverlay.style.display = "flex";
     }
   });
 
