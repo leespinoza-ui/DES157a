@@ -109,7 +109,7 @@
 
       <p>Somehow, the <mark>${noun3}</mark> landed back inside the <mark>${place2}</mark>, causing alarms to go off and confetti to rain from the ceiling.</p>
 
-      <p>In the end, the <mark>${animal}</mark> bowed politely, continued to <mark>${verb2}</mark>, and vanished forever—leaving behind only the <mark>${noun4}</mark> and a very <mark>${adjective3}</mark> memory.</p>
+      <p>In the end, the <mark>${animal}</mark> bowed politely, continued to <mark>${verb2}</mark>, and vanished forever leaving behind only the <mark>${noun4}</mark> and a very <mark>${adjective3}</mark> memory.</p>
 
       <img src="images/animals.png" alt="Animals">`;
 
