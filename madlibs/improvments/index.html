@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mad Libs</title>
+
+  <!-- Normalize -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JS -->
+ <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+      <h1>Mad Libs</h1>
+
+      <h2>How to Play</h2>
+      <p>Mad Libs are a fun word game where you create a silly story without knowing
+        how it will turn out. The surprise is what makes it funny!</p>
+      <p> Ask a friend to help you choose words, or challenge yourself to come up
+        with the weirdest words you can think of. </p>
+    </header>
+
+    <main>
+    
+    <section>
+        <img src="images/animals.png" alt="Animals">
+    </section>
+
+    <section id="madlib-questions">
+        <h2>MadLib Questions</h2>
+        <form id="form">
+          <ul>
+            <li>
+              <label for="adjective1"><strong>Adjective</strong>:</label>
+              <input type="text" id="adjective1" placeholder="ex: sparkly">
+            </li>
+
+            <li>
+              <label for="animal"><strong>Animal</strong>:</label>
+              <input type="text" id="animal"  placeholder="ex: hamster">
+            </li>
+
+            <li>
+              <label for="place1"><strong>Place</strong>:</label>
+              <input type="text" id="place1" placeholder="ex: library">
+            </li>
+
+            <li>
+              <label for="verb1"><strong>Verb</strong>:</label>
+              <input type="text" id="verb1" placeholder="ex: dance">
+            </li>
+
+            <li>
+              <label for="noun1"><strong>Noun</strong>:</label>
+              <input type="text" id="noun1" placeholder="ex: backpack">
+            </li>
+
+            <li>
+              <label for="adjective2"><strong>Adjective</strong>:</label>
+              <input type="text" id="adjective2" placeholder="ex: silly">
+            </li>
+
+            <li>
+              <label for="noun2"><strong>Noun</strong>:</label>
+              <input type="text" id="noun2" placeholder="ex: sandwich">
+            </li>
+
+            <li>
+              <label for="noun3"><strong>Noun</strong>:</label>
+              <input type="text" id="noun3" placeholder="ex: balloon">
+            </li>
+
+            <li>
+              <label for="place2"><strong>Place</strong>:</label>
+              <input type="text" id="place2"  placeholder="ex: kitchen">
+            </li>
+
+            <li>
+              <label for="verb2"><strong>Verb</strong>:</label>
+              <input type="text" id="verb2" placeholder="ex: hop">
+            </li>
+
+            <li>
+              <label for="noun4"><strong>Noun</strong>:</label>
+              <input type="text" id="noun4" placeholder="ex: cookie">
+            </li>
+
+            <li>
+              <label for="adjective3"><strong>Adjective</strong>:</label>
+              <input type="text" id="adjective3" placeholder="ex: goofy">
+            </li>
+          </ul>
+        <input type="submit" value="Make My MadLib!">
+        </input>
+        </form>
+
+        <div id="error"></div>
+    </section>
+
+    <section id="madlib-overlay">
+      <article>
+        <div id="madlib">
+          <!--<h2>The Story</h2>
+
+          <p>It all started on a <strong><mark>${adjective1}</mark></strong> morning when a very suspicious <strong><mark>${animal}</mark></strong> woke up inside the <strong><mark>${place1}</mark></strong>.<p>
+
+          <p>Without warning, the <strong><mark>${animal}</mark></strong> began to <strong><mark>${verb1}</mark></strong> while shouting about a missing <strong><mark>${noun1}</mark></strong>.</p>
+
+          <p>People nearby froze in fear as the <strong><mark>${adjective2}</mark><strong> <strong><mark>${animal}</mark></strong> knocked over chairs, slipped on the floor, and accidentally launched the <strong><mark>${noun2}</mark></strong> into the air.</p>
+
+          <p>Somehow, the <strong><mark>${noun3}</mark></strong> landed back inside the <strong><mark>${place2}</mark></strong>, causing alarms to go off and confetti to rain from the ceiling.</p>
+
+          <p>In the end, the <strong><mark>${animal}</mark></strong> bowed politely,continued to <strong><mark>${verb2}</mark></strong>, and vanished forever leaving behind only the <strong><mark>${noun4}</mark></strong> and a very<strong><mark>${adjective3}</mark></strong> memory.</p>
+
+          <img src="images/animals.png alt="animals> -->
+        </div>
+        <p><a href="#" id="close">Close</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; MadLib Example 2</p>
+  </footer>
+</body>
+</html>
