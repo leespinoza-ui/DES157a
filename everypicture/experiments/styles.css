@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #fff7fb;
+  color: #2a1b22;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 10px;
+}
+
+p {
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.pic {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* hovering starts */
+.grid.is-hovering .pic {
+  filter: blur(6px);
+  opacity: 0.5;
+  transform: scale(0.97);
+}
+
+/* hovered image */
+.grid.is-hovering .pic.is-active {
+  filter: blur(0);
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.pic.is-selected {
+  box-shadow: 0 0 0 5px white,
+              0 18px 40px rgba(0,0,0,0.25);
+}
+
+/* Christmas vibe */
+body.vibe-christmas {
+  background: #ffeef1;
+  color: #3b1f2b;
+}
+
+/* Simple vibe */
+body.vibe-simple {
+  background: #f5f6f8;
+  color: #1a1a1a;
+}
+
+/* Valentine vibe */
+body.vibe-valentine {
+  background: #ffdce9;
+  color: #3a1a2a;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pic {
+    height: 260px;
+  }
+}
