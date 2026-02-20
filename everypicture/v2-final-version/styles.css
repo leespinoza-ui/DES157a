@@ -7,7 +7,7 @@ body{
   color: #111;
 }
 
-/*Columns*/
+/* Two columns like your screenshot */
 .page{
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -38,21 +38,22 @@ body{
   padding: 0;
 }
 
-/*Long scroll area */
+/* Make a long scroll area (adjust this to control how much scrolling happens) */
 .scroll-track{
-  height: 260vh;  
+  height: 260vh;  /* more = slower movement / more sections */
   position: relative;
 }
 
-/* Sticky image */
+/* Sticky image viewport (this stays “in one spot” while scrolling) */
 .viewer{
   position: sticky;
   top: 0;
   height: 100vh;
   overflow: hidden;
- background: #000; 
+  background: #000; /* shows as black if image doesn't fill */
+}
 
-/* The moving image*/
+/* The moving image inside the viewport */
 .viewer img{
   position: absolute;
   left: 0;
@@ -61,11 +62,12 @@ body{
   height: auto;
   display: block;
 
+  /* smooth motion */
   will-change: transform;
   transform: translateY(0);
 }
 
-/* Mobile */
+/* Mobile: stack */
 @media (max-width: 900px){
   .page{
     grid-template-columns: 1fr;
