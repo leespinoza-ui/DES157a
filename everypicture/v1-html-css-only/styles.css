@@ -7,14 +7,12 @@ body{
   color: #111;
 }
 
-/*Columns*/
 .page{
   display: grid;
   grid-template-columns: 320px 1fr;
   min-height: 100vh;
 }
 
-/* LEFT COLUMN */
 .left{
   padding: 28px 22px;
 }
@@ -29,50 +27,49 @@ body{
 .left p{
   font-size: 18px;
   line-height: 1.6;
-  margin: 0;
+  margin: 0 0 12px;
   max-width: 260px;
 }
 
-/* RIGHT COLUMN */
 .right{
   padding: 0;
 }
 
-/*Long scroll area */
 .scroll-track{
-  height: 260vh;  
+  height: 260vh;
   position: relative;
 }
 
-/* Sticky image */
 .viewer{
   position: sticky;
   top: 0;
   height: 100vh;
-  overflow: hidden;
- background: #000; 
-
-/* The moving image*/
-.viewer img{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: auto;
-  display: block;
-
-  will-change: transform;
-  transform: translateY(0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  overflow: visible;
 }
 
-/* Mobile */
+.viewer img{
+  position: static;
+  max-width: 100%;
+  max-height: 100vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
 @media (max-width: 900px){
   .page{
     grid-template-columns: 1fr;
   }
+
   .left{
     padding-bottom: 10px;
   }
+
   .scroll-track{
     height: 220vh;
   }
