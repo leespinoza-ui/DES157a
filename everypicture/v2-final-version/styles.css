@@ -1,0 +1,76 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+main {
+  width: 30vw;
+  padding: 40px;
+}
+
+.story-section {
+  height: 100vh;
+}
+
+.intro-section {
+  height: 150vh;
+  align-items: center;
+}
+
+.intro-text {
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+ul {
+  margin-top: 10px;
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+figure {
+  margin: 0;
+  width: 70vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+figure img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1038px;
+  height: 832px;
+  object-fit: contain;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 1.5s ease;
+}
+
+.full {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.sect1 {
+  transform: translate(-80%, -10%) scale(2.1);
+}
+
+.sect2 {
+  transform: translate(-10%, -70%) scale(2.7);
+}
+
+.sect3 {
+  transform: translate(-70%, -120%) scale(2.6);
+}
