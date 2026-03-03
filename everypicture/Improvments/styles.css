@@ -3,15 +3,29 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  background-color: #f8e6eb;
+  color: #5a3d44;
 }
 
 h1, h2 {
   font-family: 'Playfair Display', serif;
 }
 
+h1 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-weight: 600;
+  color: #b04c63;
+}
+
 main {
   width: 30vw;
   padding: 40px;
+  background-color: #f3d6de;
+  min-height: 100vh;
 }
 
 .story-section {
@@ -26,6 +40,14 @@ main {
 .intro-text {
   line-height: 1.6;
   max-width: 90%;
+}
+
+.scroll-note {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.7;
 }
 
 ul {
@@ -56,7 +78,7 @@ figure img {
   height: 832px;
   object-fit: contain;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 1.5s ease;
+  transition: transform 1.8s ease-in-out;
 }
 
 .full {
@@ -73,4 +95,17 @@ figure img {
 
 .sect3 {
   transform: translate(-70%, -120%) scale(2.6);
+}
+
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 8px 14px;
+  border: none;
+  background-color: #b04c63;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 0.8rem;
 }
