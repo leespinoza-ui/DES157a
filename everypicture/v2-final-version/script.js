@@ -4,6 +4,7 @@
   window.addEventListener("load", function () {
     const sections = document.querySelectorAll(".story-section");
     const image = document.querySelector("figure img");
+    const topBtn = document.getElementById("topBtn");
 
     let tops = [];
     let pageTop = 0;
@@ -23,12 +24,9 @@
     window.addEventListener("scroll", function () {
       pageTop = window.pageYOffset + 300;
 
-      // scrolling down
       if (counter < tops.length && pageTop > tops[counter]) {
         counter++;
-      }
-      // scrolling up
-      else if (counter > 0 && pageTop < tops[counter - 1]) {
+      } else if (counter > 0 && pageTop < tops[counter - 1]) {
         counter--;
       }
 
@@ -66,6 +64,12 @@
       } else {
         image.className = "sect" + counter;
       }
+    }
+
+    if (topBtn) {
+      topBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
     }
   });
 })();
