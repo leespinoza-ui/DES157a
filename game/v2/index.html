@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Game of Pig</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
+  
   <script src="script.js" defer></script>
 </head>
 
@@ -26,27 +25,38 @@
     </header>
 
     <section class="game-layout">
+
       <section class="game-board">
+
         <section class="scoreboard">
+
           <article class="player player1 active-player">
             <p class="player-label">Current Player</p>
             <h2>Player 1</h2>
             <p class="score" id="score-0">0</p>
-            <p class="mini-score">Turn Total: <span id="current-0">0</span></p>
+            <p class="mini-score">
+              Turn Total: <span id="current-0">0</span>
+            </p>
           </article>
 
           <article class="player player2">
             <p class="player-label">Waiting</p>
             <h2>Player 2</h2>
             <p class="score" id="score-1">0</p>
-            <p class="mini-score">Turn Total: <span id="current-1">0</span></p>
+            <p class="mini-score">
+              Turn Total: <span id="current-1">0</span>
+            </p>
           </article>
         </section>
 
         <section class="center-area">
-          <p class="turn-indicator" id="turn-indicator">Player 1's Turn</p>
+
+          <p class="turn-indicator" id="turn-indicator">
+            Player 1's Turn
+          </p>
 
           <div class="dice-wrap">
+
             <img
               src="images/one.png"
               alt="first dice"
@@ -54,7 +64,7 @@
               id="dice-1"
               width="200"
               height="200"
-            />
+            >
 
             <img
               src="images/one.png"
@@ -63,15 +73,19 @@
               id="dice-2"
               width="200"
               height="200"
-            />
+            >
+
           </div>
 
-          <p class="message" id="message">Press Roll to start your turn.</p>
+          <p class="message" id="message">
+            Press Roll to start your turn.
+          </p>
 
           <nav class="controls">
             <button class="roll" id="roll-btn" type="button">Roll</button>
             <button class="hold" id="hold-btn" type="button">Hold</button>
           </nav>
+
         </section>
       </section>
 
